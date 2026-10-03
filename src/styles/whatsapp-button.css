@@ -1,0 +1,80 @@
+.whatsapp-button {
+  position: fixed;
+  z-index: 15;
+  right: max(26px, env(safe-area-inset-right));
+  bottom: max(26px, env(safe-area-inset-bottom));
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  background: #20c76a;
+  box-shadow: 0 7px 20px rgba(14, 107, 57, 0.28);
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-3px);
+  background: #16b85d;
+  box-shadow: 0 10px 25px rgba(14, 107, 57, 0.38);
+}
+
+.whatsapp-ripple,
+.whatsapp-ripple::before,
+.whatsapp-ripple::after {
+  position: absolute;
+  inset: -1px;
+  border: 1px solid rgba(32, 199, 106, 0.72);
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+  animation: whatsapp-ripple 2.8s ease-out infinite;
+}
+
+.whatsapp-ripple::before {
+  animation-delay: 0.9s;
+}
+
+.whatsapp-ripple::after {
+  animation-delay: 1.8s;
+}
+
+.whatsapp-button svg {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes whatsapp-ripple {
+  0% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+
+  75%,
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+
+@media (max-width: 700px) {
+  .whatsapp-button {
+    right: max(20px, env(safe-area-inset-right));
+    bottom: calc(102px + env(safe-area-inset-bottom));
+    width: 52px;
+    height: 52px;
+    font-size: 1.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-ripple,
+  .whatsapp-ripple::before,
+  .whatsapp-ripple::after {
+    animation: none;
+  }
+}

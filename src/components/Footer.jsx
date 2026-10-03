@@ -5,34 +5,30 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-
-        <div className="footer-brand">
-          <Link to="/" className="footer-logo">
-            Davis
+        <div className="footer-main">
+          <p className="eyebrow">HAVE A GOOD ONE.</p>
+          <h2>Make something <span>useful.</span></h2>
+          <Link className="footer-contact" to="/contact">
+            Start a conversation <span aria-hidden="true">↗</span>
           </Link>
-
-          <p>
-            Frontend developer building modern
-            digital experiences.
-          </p>
         </div>
 
-        <div className="footer-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contact</Link>
+        <div className="footer-side">
+          <Link to="/" className="footer-logo">D.</Link>
+          <nav className="footer-links" aria-label="Footer navigation">
+            <Link to="/projects">Projects</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+          </nav>
+          <p className="footer-caption">Independent builder · Ghana</p>
         </div>
-
       </div>
-
       <div className="footer-bottom">
-        <p>
-          © 2026 Davis. All rights reserved.
-        </p>
+        <span>© {new Date().getFullYear()} Davis</span>
+        <span>Made with intention, shipped for the web.</span>
       </div>
     </footer>
   )
 }
 
-export default Footer;
+export default Footer

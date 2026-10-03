@@ -1,15 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  color: #001845ff;
+  background: #f7f8fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+
+  --smart-blue: #0466c8ff;
+  --sapphire: #0353a4ff;
+  --regal-navy: #023e7dff;
+  --prussian-blue: #002855ff;
+  --prussian-blue-2: #001845ff;
+  --prussian-blue-3: #001233ff;
+  --twilight-indigo: #33415cff;
+  --blue-slate: #5c677dff;
+  --slate-grey: #7d8597ff;
+  --lavender-grey: #979dacff;
+  --paper: #f7f8fa;
+  --line: rgba(0, 24, 69, 0.14);
+  --mono: 'DM Mono', 'Courier New', monospace;
+}
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 html {
+  min-width: 0;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #ffffff;
-  color: #03045e;
+  min-width: 0;
+  margin: 0;
+  background: var(--paper);
+  color: var(--prussian-blue-2);
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--smart-blue);
+  outline-offset: 4px;
+}
+
+::selection {
+  color: white;
+  background: var(--sapphire);
+}
+
+.section-label,
+.eyebrow,
+.mono-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.section-label {
+  color: var(--sapphire);
+}
+
+.page-container {
+  width: min(1320px, calc(100% - 80px));
+  margin-inline: auto;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--prussian-blue-2);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 180ms ease, gap 180ms ease;
+}
+
+.text-link:hover {
+  gap: 0.9rem;
+  color: var(--smart-blue);
+}
+
+.arrow-link {
+  display: inline-grid;
+  width: 40px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--prussian-blue-2);
+  text-decoration: none;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.arrow-link:hover {
+  border-color: var(--prussian-blue-2);
+  background: var(--prussian-blue-2);
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .page-container {
+    width: min(100% - 40px, 1320px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

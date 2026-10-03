@@ -1,0 +1,40 @@
+const projects = [
+  {
+    id: 'datainn',
+    title: 'DataInn',
+    category: 'Digital product · Ghana',
+    coverLabel: 'datainn',
+    coverDetail: 'Data that gets you there.',
+    description: 'A Ghana-focused platform concept for finding and purchasing mobile data bundles.',
+    problem: 'Buying mobile data should feel straightforward, not like a maze of options.',
+    approach: 'Shape the experience around a clear bundle-selection and purchase journey for local users.',
+    focus: 'A practical Ghanaian use case, made easier to navigate.',
+    technologies: ['Product thinking', 'UI design', 'Web'],
+  },
+  {
+    id: 'easyvo',
+    title: 'Easyvo',
+    category: 'Web application',
+    coverLabel: 'easyvo.',
+    coverDetail: 'Good work deserves a good invoice.',
+    description: 'An invoice generator built to make creating professional invoices feel simple and fast.',
+    problem: 'Putting together a polished invoice can take longer than the work it represents.',
+    approach: 'Keep the core task front and centre: add the details, shape the document, and get it ready to share.',
+    focus: 'A focused, approachable workflow for a useful everyday tool.',
+    technologies: ['React', 'JavaScript', 'CSS'],
+  },
+  {
+    id: 'titan-span',
+    title: 'Titan Span Contractors',
+    category: 'Business website',
+    coverLabel: 'TITAN SPAN',
+    coverDetail: 'Built on a stronger foundation.',
+    description: 'A website concept for a roofing and construction company, designed around clarity and trust.',
+    problem: 'A local contractor needs a digital first impression that makes its services easy to understand.',
+    approach: 'Give the business a clear, confident presentation with the next step never far away.',
+    focus: 'Service clarity, credibility, and a conversion-minded layout.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+  },
+]
+
+export default projects
