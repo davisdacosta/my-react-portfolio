@@ -24,7 +24,7 @@ static site:
 
 1. Push the project to GitHub.
 2. In Render, choose **New + → Blueprint** and connect this repository.
-3. Review the `davis-portfolio` static site and deploy it.
+3. Review the `davisfrontend` static site and deploy it.
 
 Render installs dependencies with `npm ci`, builds with `npm run build`, and
 publishes the `dist` directory. The rewrite rule serves the Vite entry point
